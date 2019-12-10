@@ -9,8 +9,8 @@ private:
     Line *LineHead;
     RTable *RTableHead;
 public:
-    Router();                                                           //只初始化变量
-    void BuildLine(int RouterID,int RouterID,int weight);               //为路由器添加一个新的物理连接
+    Router(int ID);                                                     //只初始化变量
+    void BuildLine(int ID,int weight);                                  //为路由器添加一个新的物理连接
     void RoterOffLine(void);                                            //路由器下线
     void RoterOnline(void);                                             //路由器上线
     void UpdateRtable(Rtable* head);                                    //更新路由表

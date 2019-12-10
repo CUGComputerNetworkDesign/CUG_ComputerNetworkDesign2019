@@ -1,5 +1,7 @@
 #ifndef LINE_H_INCLUDED
 #define LINE_H_INCLUDED
+//*Line类作为
+
 class Line
 {
     int RoterId1;
