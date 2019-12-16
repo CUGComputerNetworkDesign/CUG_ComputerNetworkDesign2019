@@ -4,10 +4,20 @@
 
 class Line
 {
-    int RoterId1;
-    int RoterId2;
+    int D_IP[3];
+    int NEXT_IP[3];
     int weight;
-    Line(int id1,int id2);
+    Line*next;
+    Line(int *dIP,int *nIP,int weight1)
+    {
+      for(,i<4,i++)
+      {
+          D_IP[i]=dIP;
+          NEXT_IP[i]=nIP;
+      }
+        weight=weight1;
+        Line*next=NULL;
+    }
 };
 
 
