@@ -34,6 +34,9 @@
 		</Compiler>
 		<Unit filename="Line.h" />
 		<Unit filename="Router.h" />
+		<Unit filename="RouterTable.h" />
+		<Unit filename="Table.h" />
+		<Unit filename="Topo.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
