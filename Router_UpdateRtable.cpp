@@ -1,11 +1,12 @@
 #include"Router.h"
 
-void UpdateRtable(int *IP,Routertable* head) //更新路由表
+bool UpdateRtable(int *IP,Routertable* head) //更新路由表
 {
     Rtable*p1=RtableHead;//自己的路由表
     Rtable*p2=head;//传进来的路由表
     Line*p=LineHead;
     int weight=0;
+    bool judge=false;//判断是否进行过更新
     while(p!=NULL)
     {
         if(p->IP2[0]==IP[0]&&p->IP2[1]==IP[1]&&p->IP2[2]==IP[2]&&p->IP2[3]==IP[3])
@@ -23,11 +24,12 @@ void UpdateRtable(int *IP,Routertable* head) //更新路由表
                         p1->length=p2->length+weight;// 修改路由表
                         for(int i=0;i<4;i++)
                            p1->NEXT_IP[i]=IP[i];
+                           judge=true;  //修改标志
                     }
                 }
             else p1=p1->next;
         }
         p2=p2->next; //寻找下一行
     }
-    return ;
+    return judge;
 }
