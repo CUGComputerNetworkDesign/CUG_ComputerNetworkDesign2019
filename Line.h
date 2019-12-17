@@ -4,16 +4,16 @@
 
 class Line
 {
-    int D_IP[3];
-    int NEXT_IP[3];
+    int IP1[4];
+    int IP2[4];
     int weight;
     Line*next;
-    Line(int *dIP,int *nIP,int weight1)
+    Line(int *ip1,int *ip2,int weight1)
     {
       for(,i<4,i++)
       {
-          D_IP[i]=dIP;
-          NEXT_IP[i]=nIP;
+          IP1=ip1;
+          IP2=ip2;
       }
         weight=weight1;
         Line*next=NULL;
