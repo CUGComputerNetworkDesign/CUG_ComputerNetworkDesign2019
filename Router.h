@@ -14,7 +14,7 @@ public:
     bool DeleteLine(int *IP);                //删除一条边
     void RoterOffLine(void){Status=0;}      //路由器下线,状态置0
     void RoterOnline(void){Status=1;}       //路由器上线,状态置1
-    void UpdateRtable(int * IP,Routertable* head); //更新路由表
+    bool UpdateRtable(int * IP,Routertable* head); //更新路由表
 };
 
 
