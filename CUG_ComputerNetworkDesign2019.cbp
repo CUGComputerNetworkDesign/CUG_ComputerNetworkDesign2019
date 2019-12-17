@@ -35,6 +35,8 @@
 		<Unit filename="Line.h" />
 		<Unit filename="Router.h" />
 		<Unit filename="RouterTable.h" />
+		<Unit filename="Router_BuildLine.cpp" />
+		<Unit filename="Router_UpdateRtable.cpp" />
 		<Unit filename="Table.h" />
 		<Unit filename="Topo.h" />
 		<Unit filename="main.cpp" />
