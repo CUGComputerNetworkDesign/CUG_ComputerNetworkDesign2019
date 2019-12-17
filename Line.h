@@ -4,10 +4,10 @@
 
 class Line
 {
-    int IP1[4];
-    int IP2[4];
-    int weight;
-    Line*next;
+    int IP1[4];//上一个路由表
+    int IP2[4];//下一个路由表
+    int weight;//权重
+    Line*next;//链表的next指针
     Line(int *ip1,int *ip2,int weight1)
     {
       for(,i<4,i++)
