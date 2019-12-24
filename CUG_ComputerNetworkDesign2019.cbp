@@ -32,14 +32,33 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="IPcmp.cpp" />
 		<Unit filename="Line.h" />
+		<Unit filename="Line_Line.cpp" />
 		<Unit filename="Router.h" />
 		<Unit filename="RouterTable.h" />
+		<Unit filename="RouterTable_RouterTable.cpp" />
 		<Unit filename="Router_BuildLine.cpp" />
+		<Unit filename="Router_DeleteLine.cpp" />
+		<Unit filename="Router_PrintRtable.cpp" />
+		<Unit filename="Router_Router.cpp" />
 		<Unit filename="Router_UpdateRtable.cpp" />
 		<Unit filename="Table.h" />
+		<Unit filename="Table_Table.cpp" />
 		<Unit filename="Topo.h" />
+		<Unit filename="Topo_DeleteLine.cpp" />
+		<Unit filename="Topo_DeleteRouter.cpp" />
+		<Unit filename="Topo_Insert.cpp" />
+		<Unit filename="Topo_NewRouter.cpp" />
+		<Unit filename="Topo_PrintRouter.cpp" />
+		<Unit filename="Topo_Rip.cpp" />
+		<Unit filename="Topo_Topo.cpp" />
+		<Unit filename="Topo_deleteRTable.cpp" />
+		<Unit filename="Topo_networkFile.cpp" />
+		<Unit filename="Topo_reRTable.cpp" />
+		<Unit filename="Topo_routerFile.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

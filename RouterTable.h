@@ -4,20 +4,12 @@
 class RouterTable     //路由表的节点
 {
 public:
-  int D_IP[3];
-  int NEXT_IP[3];
+  int D_IP[4];      //目的IP
+  int NEXT_IP[4];  //下一跳IP
   int length;
-  RouterTable *next;
-  RouterTable(int *dIP,int *nIP,int len,RouterTable* n)
-  {
-      for(,i<4,i++)
-      {
-          D_IP[i]=dIP;
-          NEXT_IP[i]=nIP;
-      }
-      length=len;
-      RouterTable*n=RouterTable*next;
-  }
-} //边类
+  RouterTable *next;//链表的next指针
+  RouterTable(int *dIP,int *nIP,int len,RouterTable* n);
+  RouterTable(){for(int i=0;i<4;i++){D_IP[i]=0;NEXT_IP[i]=0;} length=0;next=0;}
+}; //边类
 
 #endif
