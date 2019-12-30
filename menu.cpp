@@ -17,7 +17,8 @@ void menu(void)
         cout<<" 4.删除一个顶点"<<endl;
         cout<<" 5.增加一个顶点"<<endl;
         cout<<" 6.退出"<<endl;
-    cout<<"########################\n"<<endl;
+        cout<<"########################\n"<<endl;
+	cout<<"李玥瑶"<<endl;
         cin>>i;
         switch(i){
             case 1:{
@@ -112,5 +113,5 @@ void menu(void)
 	}
 
     system("cls");
-    cout<<"李玥瑶"<<endl;
+
 }
