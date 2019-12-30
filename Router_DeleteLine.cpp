@@ -3,6 +3,7 @@
 using namespace std;
 bool Router::DeleteLine(int *IP)               //É¾³ıÒ»Ìõ±ß
 {
+cout<<"Duan"<<endl;
     Line *p = LineHead;
     Line *p1 = nullptr;
     while(p!=nullptr)
@@ -26,5 +27,6 @@ bool Router::DeleteLine(int *IP)               //É¾³ıÒ»Ìõ±ß
         p1 = p;                               //Ôİ´æ
         p = p->next;
     }
+
     return false;
 }
