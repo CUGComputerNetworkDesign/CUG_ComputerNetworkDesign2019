@@ -7,5 +7,6 @@ Router::Router(int *IP) //¹¹Ôìº¯Êý
     RTableHead = nullptr;
     RTableHead=new RouterTable(IP,IP,0,RTableHead);
     LineHead = nullptr;
+    cout<<"段依琳"<<endl;
     return ;
 }
