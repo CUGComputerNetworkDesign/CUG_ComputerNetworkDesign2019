@@ -10,25 +10,26 @@ void menu(void)
 	while(1){
         cout<<endl;
         cout<<"########################"<<endl;
-        cout<<"     ÇëÊäÈë¹¦ÄÜ£º"<<endl;
-        cout<<" 1.ÊäÈëÂ·ÓÉºÅÏÔÊ¾Â·ÓÉ±í"<<endl;
-        cout<<" 2.É¾³ýÒ»Ìõ±ß"<<endl;
-        cout<<" 3.²åÈëÒ»Ìõ±ß"<<endl;
-        cout<<" 4.É¾³ýÒ»¸ö¶¥µã"<<endl;
-        cout<<" 5.Ôö¼ÓÒ»¸ö¶¥µã"<<endl;
-        cout<<" 6.ÍË³ö"<<endl;
+        cout<<"     è¯·è¾“å…¥åŠŸèƒ½ï¼š"<<endl;
+        cout<<" 1.è¾“å…¥è·¯ç”±å·æ˜¾ç¤ºè·¯ç”±è¡¨"<<endl;
+        cout<<" 2.åˆ é™¤ä¸€æ¡è¾¹"<<endl;
+        cout<<" 3.æ’å…¥ä¸€æ¡è¾¹"<<endl;
+        cout<<" 4.åˆ é™¤ä¸€ä¸ªé¡¶ç‚¹"<<endl;
+        cout<<" 5.å¢žåŠ ä¸€ä¸ªé¡¶ç‚¹"<<endl;
+        cout<<" 6.é€€å‡º"<<endl;
     cout<<"########################\n"<<endl;
+        cout<<"li"<<endl;
         cin>>i;
         switch(i){
             case 1:{
                 topo.Rip();
                 int ip[4];
                 char dot;
-                cout<<"ÇëÊäÈëÂ·ÓÉÆ÷IP:"<<endl;
+                cout<<"è¯·è¾“å…¥è·¯ç”±å™¨IP:"<<endl;
                 cin >> ip[0] >> dot >> ip[1] >> dot >> ip[2] >> dot >> ip[3];
                 //cout << ip[0] << ip[1] << ip[2] << ip[3] << endl;
                 if(!topo.PrintRouter(ip))
-                    cout<<"ÎÞ´ËÂ·ÓÉÆ÷!"<<endl;
+                    cout<<"æ— æ­¤è·¯ç”±å™¨!"<<endl;
                 getchar();
                 break;
             }
@@ -36,15 +37,15 @@ void menu(void)
                 char dot;
                 int ip1[4];
                 int ip2[4];
-                cout<<"É¾³ýÒ»Ìõ±ß£¬ÇëÊäÈë±ßÁ½¶ËµÄÂ·ÓÉÆ÷IPµØÖ·£º"<<endl;
+                cout<<"åˆ é™¤ä¸€æ¡è¾¹ï¼Œè¯·è¾“å…¥è¾¹ä¸¤ç«¯çš„è·¯ç”±å™¨IPåœ°å€ï¼š"<<endl;
                 cout << "IP1:";
                 cin >> ip1[0] >> dot >> ip1[1] >> dot >> ip1[2] >> dot >> ip1[3];
                 cout << "IP2:";
                 cin >> ip2[0] >> dot >> ip2[1] >> dot >> ip2[2] >> dot >> ip2[3];
                 if(topo.DeleteLine(ip1,ip2))
-                    cout << "É¾³ý³É¹¦£¡" << endl;
+                    cout << "åˆ é™¤æˆåŠŸï¼" << endl;
                 else
-                    cout << "É¾³ýÊ§°Ü£¡" << endl;
+                    cout << "åˆ é™¤å¤±è´¥ï¼" << endl;
                 topo.Rip();
                 getchar();
                 break;
@@ -55,29 +56,29 @@ void menu(void)
                 int ip2[4];
                 char dot;
                 int weight = 0;
-                cout<<"²åÈëÒ»Ìõ±ß£¬ÇëÊäÈë±ßÁ½¶ËµÄÂ·ÓÉÆ÷µÄIPµØÖ·£º"<<endl;
+                cout<<"æ’å…¥ä¸€æ¡è¾¹ï¼Œè¯·è¾“å…¥è¾¹ä¸¤ç«¯çš„è·¯ç”±å™¨çš„IPåœ°å€ï¼š"<<endl;
                 cout << "IP1:";
                 cin >> ip1[0] >> dot >> ip1[1] >> dot >> ip1[2] >> dot >> ip1[3];
                 cout << "IP2:";
                 cin >> ip2[0] >> dot >> ip2[1] >> dot >> ip2[2] >> dot >> ip2[3];
-                cout << "ÇëÊäÈëÕâÌõ±ßµÄÈ¨ÖØ£º";
+                cout << "è¯·è¾“å…¥è¿™æ¡è¾¹çš„æƒé‡ï¼š";
                 cin >> weight;
                 if(topo.Insert(ip1,ip2,weight))
-                    cout << "²åÈë³É¹¦£¡" << endl;
-                else cout<<"²åÈëÊ§°Ü!"<<endl;
+                    cout << "æ’å…¥æˆåŠŸï¼" << endl;
+                else cout<<"æ’å…¥å¤±è´¥!"<<endl;
                 getchar();
                 break;
             }
             case 4:{
                 char dot;
                 int ip[4];
-                cout<<"É¾³ýÒ»¸öÂ·ÓÉÆ÷£º"<<endl;
+                cout<<"åˆ é™¤ä¸€ä¸ªè·¯ç”±å™¨ï¼š"<<endl;
                 cin >> ip[0] >> dot >> ip[1] >> dot >> ip[2] >> dot >> ip[3];
                 if(topo.DeleteRouter(ip)){
-                    cout << "É¾³ý³É¹¦£¡" << endl;
+                    cout << "åˆ é™¤æˆåŠŸï¼" << endl;
                 }
                 else{
-                    cout << "É¾³ýÊ§°Ü£¡" << endl;
+                    cout << "åˆ é™¤å¤±è´¥ï¼" << endl;
                 }
                 topo.Rip();
                 getchar();
@@ -87,24 +88,24 @@ void menu(void)
                 topo.Rip();
                 int ip[4];
                 char dot;
-                cout<<"Ìí¼ÓÒ»¸öÂ·ÓÉÆ÷,ÇëÊäÈëIPµØÖ·£º"<<endl;
+                cout<<"æ·»åŠ ä¸€ä¸ªè·¯ç”±å™¨,è¯·è¾“å…¥IPåœ°å€ï¼š"<<endl;
                 cin >> ip[0] >> dot >> ip[1] >> dot >> ip[2] >> dot >> ip[3];
                 if(topo.NewRouter(ip)){
-                    cout << "Ìí¼Ó³É¹¦" << endl;
+                    cout << "æ·»åŠ æˆåŠŸ" << endl;
                 }
                 else{
-                    cout << "Ìí¼ÓÊ§°Ü" << endl;
+                    cout << "æ·»åŠ å¤±è´¥" << endl;
                 }
                 getchar();
                 break;
             }
             case 6:{
-                cout << "ÍË³ö³ÌÐò£¡" << endl;
+                cout << "é€€å‡ºç¨‹åºï¼" << endl;
                 exit(0);
                 break;
             }
             default:{
-                cout << "ÇëÊäÈëÕýÈ·µÄÊý×Ö" << endl;
+                cout << "è¯·è¾“å…¥æ­£ç¡®çš„æ•°å­—" << endl;
                 getchar();
                 break;
             }
