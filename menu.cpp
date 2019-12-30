@@ -112,4 +112,6 @@ void menu(void)
 	}
 
     system("cls");
+    fflush();
+    cout<<"Àî«hÑþ"<<endl;
 }
